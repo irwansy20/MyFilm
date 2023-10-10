@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Judul Film"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:layout_marginStart="10dp"
             app:layout_constraintTop_toTopOf="parent"
@@ -34,11 +34,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tanggal"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/judul"
             app:layout_constraintTop_toBottomOf="@id/judul"/>
 
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_rate_24"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/tanggal"
+            app:layout_constraintTop_toBottomOf="@id/tanggal"/>
+
+        <TextView
+            android:id="@+id/popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popularity"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="@id/logo"
+            app:layout_constraintBottom_toBottomOf="@id/logo"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
