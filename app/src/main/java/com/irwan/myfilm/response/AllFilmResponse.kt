@@ -1,5 +1,7 @@
 package com.irwan.myfilm.response
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class AllFilmResponse(
@@ -17,6 +19,7 @@ data class AllFilmResponse(
 	val totalResults: Int
 )
 
+@Entity(tableName = "film")
 data class ResultsItem(
 
 	@field:SerializedName("overview")
@@ -34,9 +37,6 @@ data class ResultsItem(
 	@field:SerializedName("title")
 	val title: String,
 
-	@field:SerializedName("genre_ids")
-	val genreIds: List<Int>,
-
 	@field:SerializedName("poster_path")
 	val posterPath: String,
 
@@ -49,6 +49,7 @@ data class ResultsItem(
 	@field:SerializedName("popularity")
 	val popularity: Double,
 
+	@PrimaryKey
 	@field:SerializedName("id")
 	val id: Int,
 

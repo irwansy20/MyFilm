@@ -8,5 +8,8 @@ import retrofit2.http.Query
 
 interface ApiService {
     @GET("movie?api_key=f7b67d9afdb3c971d4419fa4cb667fbf")
-    fun getFilm(): Call<AllFilmResponse>
+    suspend fun getFilm(
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ): AllFilmResponse
 }
