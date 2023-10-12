@@ -22,8 +22,12 @@ class LoadingStateAdapter(private val retry: () -> Unit) : LoadStateAdapter<Load
             binding.retryButton.setOnClickListener { retry.invoke() }
         }
         fun bind(loadState: LoadState) {
-            if (loadState is LoadState.Error) {
-                binding.errorMsg.text = loadState.error.localizedMessage
+            when(loadState){
+                is LoadState.Error ->{
+                    binding.errorMsg.text = "Aplikasi menggunakan data local "
+                } else ->{
+                    binding.errorMsg.text = ""
+                }
             }
             binding.progressBar.isVisible = loadState is LoadState.Loading
             binding.retryButton.isVisible = loadState is LoadState.Error

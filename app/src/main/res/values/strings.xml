@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Film</string>
+    <string name="notification_title">Data telah diperbarui</string>
+    <string name="notification_message">Klik untuk melihat detail</string>
+    <string name="notification_subtext">Update</string>
 </resources>
